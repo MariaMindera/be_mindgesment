@@ -1,0 +1,41 @@
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO
+
+spring:
+  application:
+    name: mindgesment
+
+  #DATABASE CONFIG
+  datasource:
+#    url: jdbc:postgresql://db:5432/mindgesment
+    url: jdbc:postgresql://localhost:5433/mindgesment
+    username: dev
+    password: dev
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: true
+
+#OpenAPI CONFIG
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+
+#SENDGRID CONFIG
+sendgrid:
+  key: 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
+email:
+  forgotPassword:
+    key: d-e1958e29689f47b282cfc1996b24d488
+  welcome:
+    key: d-0fe4c20c3d4c4bd28fd75373cff16efc
+  changeEmail:
+    key: d-08af5af6ac9948f6b444d9c745c5ca4c
+  emailChanged:
+    key: d-4c899741994d47c4b50a772edd1c6405
+  changePassword:
+    key: d-94a02cf11dab49a7a1f4e01e2da15b18
